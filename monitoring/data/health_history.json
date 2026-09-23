@@ -1,0 +1,227 @@
+[
+    {
+        "timestamp": "2026-09-23 14:35:52",
+        "status": "unhealthy",
+        "response_time": null
+    },
+    {
+        "timestamp": "2026-09-23 14:36:02",
+        "status": "healthy",
+        "response_time": 3.29
+    },
+    {
+        "timestamp": "2026-09-23 14:36:12",
+        "status": "healthy",
+        "response_time": 2.49
+    },
+    {
+        "timestamp": "2026-09-23 14:36:22",
+        "status": "healthy",
+        "response_time": 2.74
+    },
+    {
+        "timestamp": "2026-09-23 14:36:32",
+        "status": "healthy",
+        "response_time": 2.75
+    },
+    {
+        "timestamp": "2026-09-23 14:36:42",
+        "status": "healthy",
+        "response_time": 2.11
+    },
+    {
+        "timestamp": "2026-09-23 14:36:52",
+        "status": "healthy",
+        "response_time": 1.75
+    },
+    {
+        "timestamp": "2026-09-23 14:37:02",
+        "status": "healthy",
+        "response_time": 3.91
+    },
+    {
+        "timestamp": "2026-09-23 14:37:12",
+        "status": "healthy",
+        "response_time": 2.55
+    },
+    {
+        "timestamp": "2026-09-23 14:37:22",
+        "status": "healthy",
+        "response_time": 2.22
+    },
+    {
+        "timestamp": "2026-09-23 14:38:11",
+        "status": "healthy",
+        "response_time": 3.44
+    },
+    {
+        "timestamp": "2026-09-23 14:38:21",
+        "status": "healthy",
+        "response_time": 1.98
+    },
+    {
+        "timestamp": "2026-09-23 14:38:31",
+        "status": "healthy",
+        "response_time": 2.05
+    },
+    {
+        "timestamp": "2026-09-23 14:43:48",
+        "status": "healthy",
+        "response_time": 5.22
+    },
+    {
+        "timestamp": "2026-09-23 14:43:58",
+        "status": "healthy",
+        "response_time": 4.15
+    },
+    {
+        "timestamp": "2026-09-23 14:44:08",
+        "status": "healthy",
+        "response_time": 3.13
+    },
+    {
+        "timestamp": "2026-09-23 14:44:18",
+        "status": "healthy",
+        "response_time": 2.68
+    },
+    {
+        "timestamp": "2026-09-23 14:44:28",
+        "status": "healthy",
+        "response_time": 2.74
+    },
+    {
+        "timestamp": "2026-09-23 14:44:38",
+        "status": "healthy",
+        "response_time": 2.89
+    },
+    {
+        "timestamp": "2026-09-23 14:44:48",
+        "status": "healthy",
+        "response_time": 35.86
+    },
+    {
+        "timestamp": "2026-09-23 14:44:58",
+        "status": "healthy",
+        "response_time": 33.86
+    },
+    {
+        "timestamp": "2026-09-23 14:45:09",
+        "status": "healthy",
+        "response_time": 29.6
+    },
+    {
+        "timestamp": "2026-09-23 14:45:19",
+        "status": "healthy",
+        "response_time": 52.65
+    },
+    {
+        "timestamp": "2026-09-23 14:45:29",
+        "status": "healthy",
+        "response_time": 4.72
+    },
+    {
+        "timestamp": "2026-09-23 14:45:40",
+        "status": "healthy",
+        "response_time": 39.66
+    },
+    {
+        "timestamp": "2026-09-23 14:45:50",
+        "status": "healthy",
+        "response_time": 18.34
+    },
+    {
+        "timestamp": "2026-09-23 14:46:00",
+        "status": "healthy",
+        "response_time": 4.86
+    },
+    {
+        "timestamp": "2026-09-23 14:46:10",
+        "status": "healthy",
+        "response_time": 11.05
+    },
+    {
+        "timestamp": "2026-09-23 14:46:20",
+        "status": "healthy",
+        "response_time": 22.64
+    },
+    {
+        "timestamp": "2026-09-23 14:46:30",
+        "status": "healthy",
+        "response_time": 6.71
+    },
+    {
+        "timestamp": "2026-09-23 14:46:40",
+        "status": "healthy",
+        "response_time": 10.97
+    },
+    {
+        "timestamp": "2026-09-23 14:46:51",
+        "status": "unhealthy",
+        "response_time": null
+    },
+    {
+        "timestamp": "2026-09-23 14:47:01",
+        "status": "healthy",
+        "response_time": 4.73
+    },
+    {
+        "timestamp": "2026-09-23 14:47:11",
+        "status": "healthy",
+        "response_time": 3.36
+    },
+    {
+        "timestamp": "2026-09-23 14:47:21",
+        "status": "healthy",
+        "response_time": 3.71
+    },
+    {
+        "timestamp": "2026-09-23 14:47:31",
+        "status": "healthy",
+        "response_time": 2.44
+    },
+    {
+        "timestamp": "2026-09-23 14:47:41",
+        "status": "healthy",
+        "response_time": 3.08
+    },
+    {
+        "timestamp": "2026-09-23 14:47:51",
+        "status": "healthy",
+        "response_time": 3.4
+    },
+    {
+        "timestamp": "2026-09-23 14:48:01",
+        "status": "healthy",
+        "response_time": 3.31
+    },
+    {
+        "timestamp": "2026-09-23 14:48:11",
+        "status": "healthy",
+        "response_time": 9.03
+    },
+    {
+        "timestamp": "2026-09-23 14:48:21",
+        "status": "healthy",
+        "response_time": 4.16
+    },
+    {
+        "timestamp": "2026-09-23 14:48:31",
+        "status": "healthy",
+        "response_time": 2.71
+    },
+    {
+        "timestamp": "2026-09-23 14:48:41",
+        "status": "healthy",
+        "response_time": 4.04
+    },
+    {
+        "timestamp": "2026-09-23 14:48:51",
+        "status": "healthy",
+        "response_time": 2.42
+    },
+    {
+        "timestamp": "2026-09-23 14:49:01",
+        "status": "healthy",
+        "response_time": 2.68
+    }
+]

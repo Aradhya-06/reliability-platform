@@ -1,0 +1,30 @@
+services:
+  web:
+    build: .
+    container_name: reliability-web
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app #it mounts windows project folder to docker container
+      #so if i change view, urls.py etc container see immediately and reloads the server
+      - ./monitoring/data:/monitor/data 
+      #this means if anything is written in health_history file 
+      #it doesnt just remain in container but also comes in my system
+      
+    healthcheck:
+      test: ["CMD","python","-c","import urlib.request; urlib.request.urlopen('http://localhost:8000/health/')"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+  
+  
+  monitor:
+    build: ./monitoring
+    container_name: reliability-monitor
+    depends_on:
+      - web
+    volumes:
+      - ./monitoring/data:/monitor/data 
+      # this means if anything is written in health_history file 
+      #it doesnt just remain in container but also comes in my system
