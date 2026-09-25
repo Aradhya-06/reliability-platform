@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>{{ monitor.name }} - Reliability Platform</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #172033;
+        }
+
+        header {
+            background: #182436;
+            color: white;
+            padding: 28px 6%;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            color: #b9c4d4;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 35px auto;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #315a91;
+            text-decoration: none;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.06);
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .url {
+            color: #55708f;
+        }
+
+        .status {
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .healthy {
+            background: #d9f8e6;
+            color: #128043;
+        }
+
+        .unhealthy {
+            background: #ffdede;
+            color: #c62828;
+        }
+
+        .unknown {
+            background: #e5e8ed;
+            color: #596575;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .stat {
+            background: #f7f9fb;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .label {
+            color: #63748a;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .value {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .chart {
+            height: 380px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 14px 10px;
+            border-bottom: 1px solid #e5e8ec;
+        }
+
+        th {
+            color: #63748a;
+        }
+
+        @media(max-width: 800px) {
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<header>
+
+    <h1>Reliability Platform</h1>
+
+    <p>Monitor Details</p>
+
+</header>
+
+
+<div class="container">
+
+    <a href="/" class="back">
+        ← Back to Dashboard
+    </a>
+
+
+    <!-- Overview -->
+
+    <div class="card">
+
+        <div class="top">
+
+            <div>
+
+                <h2>{{ monitor.name }}</h2>
+
+                <div class="url">
+                    {{ monitor.url }}
+                </div>
+
+            </div>
+
+
+            {% if latest %}
+
+                {% if latest.status == "healthy" %}
+
+                    <div class="status healthy">
+                        ● HEALTHY
+                    </div>
+
+                {% else %}
+
+                    <div class="status unhealthy">
+                        ● UNHEALTHY
+                    </div>
+
+                {% endif %}
+
+            {% else %}
+
+                <div class="status unknown">
+                    ● NO DATA
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <div class="label">
+                    Response Time
+                </div>
+
+                <div class="value">
+
+                    {% if latest.response_time %}
+                        {{ latest.response_time }} ms
+                    {% else %}
+                        —
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="label">
+                    HTTP Status
+                </div>
+
+                <div class="value">
+
+                    {% if latest.http_status %}
+                        {{ latest.http_status }}
+                    {% else %}
+                        —
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="label">
+                    Last Checked
+                </div>
+
+                <div class="value">
+
+                    {% if latest.timestamp %}
+                        {{ latest.timestamp }}
+                    {% else %}
+                        Never
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div class="label">
+                    Monitoring
+                </div>
+
+                <div class="value">
+
+                    {% if monitor.active %}
+                        Active
+                    {% else %}
+                        Paused
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- GRAPH -->
+
+    <div class="card">
+
+        <h2>Response Time</h2>
+
+        <p style="color:#63748a;">
+            Response time during recent health checks
+        </p>
+
+        <div class="chart">
+
+            <canvas id="responseChart"></canvas>
+
+        </div>
+
+    </div>
+
+
+    <!-- HISTORY -->
+
+    <div class="card">
+
+        <h2>Recent Health Checks</h2>
+
+        <div style="overflow-x:auto;">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Status</th>
+                        <th>HTTP</th>
+                        <th>Response Time</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for check in history %}
+
+                    <tr>
+
+                        <td>
+                            {{ check.timestamp }}
+                        </td>
+
+                        <td>
+
+                            {% if check.status == "healthy" %}
+
+                                <span class="status healthy">
+                                    Healthy
+                                </span>
+
+                            {% else %}
+
+                                <span class="status unhealthy">
+                                    Unhealthy
+                                </span>
+
+                            {% endif %}
+
+                        </td>
+
+                        <td>
+                            {{ check.http_status|default:"—" }}
+                        </td>
+
+                        <td>
+
+                            {% if check.response_time %}
+                                {{ check.response_time }} ms
+                            {% else %}
+                                —
+                            {% endif %}
+
+                        </td>
+
+                    </tr>
+
+                    {% empty %}
+
+                    <tr>
+                        <td colspan="4">
+                            No health checks recorded yet.
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    const historyData =
+        {{ chart_data|safe }};
+
+    const labels = historyData.map(
+        check => check.timestamp
+    );
+
+    const responseTimes = historyData.map(
+        check => check.response_time
+    );
+
+    new Chart(
+        document.getElementById("responseChart"),
+        {
+            type: "line",
+
+            data: {
+                labels: labels,
+
+                datasets: [{
+                    label: "Response Time (ms)",
+                    data: responseTimes,
+                    borderWidth: 2,
+                    tension: 0.3,
+                    pointRadius: 3,
+                    spanGaps: true
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: "Milliseconds"
+                        }
+                    },
+
+                    x: {
+                        title: {
+                            display: true,
+                            text: "Time"
+                        }
+                    }
+                }
+            }
+        }
+    );
+
+</script>
+
+</body>
+
+</html>

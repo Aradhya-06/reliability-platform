@@ -1,111 +1,151 @@
 import time
 import urllib.request
+import urllib.error
 import json
 import os
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
+MONITORS_FILE = "/monitor/data/monitors.json"
+DATA_FILE = "/monitor/data/health_history.json"
 
-URL = "http://web:8000/health/"
 CHECK_INTERVAL = 10
 
-DATA_FILE = "data/health_history.json"
 
-
-def load_history():
-    if not os.path.exists(DATA_FILE):
-        return []
-
-    with open(DATA_FILE, "r") as file:
-        return json.load(file)
-
-
-def save_history(history):
-    with open(DATA_FILE, "w") as file:
-        json.dump(history, file, indent=4)
-
-
-def check_health():
-
-    history = load_history()
-
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+def load_json(file_path, default):
+    if not os.path.exists(file_path):
+        return default
 
     try:
+        with open(file_path, "r") as file:
+            return json.load(file)
+    except Exception:
+        return default
+
+
+def save_json(file_path, data):
+    with open(file_path, "w") as file:
+        json.dump(data, file, indent=4)
+
+
+def check_monitor(monitor):
+
+    url = monitor["url"]
+
+    timestamp = datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%Y-%m-%d %H:%M:%S")
+
+    try:
+
         start_time = time.time()
 
-        response = urllib.request.urlopen(URL, timeout=5)
+        request = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": "ReliabilityPlatform/1.0"
+            }
+        )
+
+        response = urllib.request.urlopen(
+            request,
+            timeout=5
+        )
 
         response_time = (time.time() - start_time) * 1000
 
-        if response.status == 200:
+        status_code = response.status
 
-            result = {
-                "timestamp": timestamp,
-                "status": "healthy",
-                "response_time": round(response_time, 2)
-            }
+        if 200 <= status_code < 400:
 
-            print(
-                f"[HEALTHY] Status: {response.status} | "
-                f"Response time: {response_time:.2f} ms",
-                flush=True
-            )
+            status = "healthy"
 
         else:
 
-            result = {
-                "timestamp": timestamp,
-                "status": "unhealthy",
-                "response_time": None
-            }
+            status = "unhealthy"
 
-            print(
-                f"[UNHEALTHY] Status: {response.status}",
-                flush=True
-            )
+        result = {
+            "monitor_id": monitor["id"],
+            "timestamp": timestamp,
+            "status": status,
+            "response_time": round(response_time, 2),
+            "http_status": status_code,
+            "error": None
+        }
+
+        print(
+            f"[{status.upper()}] {monitor['name']} | "
+            f"Status: {status_code} | "
+            f"Response time: {response_time:.2f} ms",
+            flush=True
+        )
+
+        return result
+
+    except urllib.error.HTTPError as e:
+
+        response_time = (time.time() - start_time) * 1000
+
+        result = {
+            "monitor_id": monitor["id"],
+            "timestamp": timestamp,
+            "status": "unhealthy",
+            "response_time": round(response_time, 2),
+            "http_status": e.code,
+            "error": f"HTTP {e.code}: {e.reason}"
+        }
+
+        print(
+            f"[UNHEALTHY] {monitor['name']} | "
+            f"HTTP {e.code}: {e.reason}",
+            flush=True
+        )
+
+        return result
 
     except Exception as e:
 
         result = {
+            "monitor_id": monitor["id"],
             "timestamp": timestamp,
             "status": "unhealthy",
-            "response_time": None
+            "response_time": None,
+            "http_status": None,
+            "error": str(e)
         }
 
         print(
-            f"[UNHEALTHY] Application is not reachable | {e}",
+            f"[UNHEALTHY] {monitor['name']} | "
+            f"Application not reachable | {e}",
             flush=True
         )
 
-    history.append(result)
-
-    # Keep only the latest 100 checks
-    history = history[-100:]
-
-    save_history(history)
+        return result
 
 
-def wait_for_application():
-    print("Waiting for application to start...", flush=True)
+def check_all_monitors():
 
-    while True:
-        try:
-            response = urllib.request.urlopen(URL, timeout=3)
+    monitors = load_json(MONITORS_FILE, [])
+    history = load_json(DATA_FILE, [])
 
-            if response.status == 200:
-                print("Application is ready!", flush=True)
-                return
+    for monitor in monitors:
 
-        except Exception:
-            print("Application not ready yet. Retrying...", flush=True)
+        if not monitor.get("active", True):
+            continue
 
-        time.sleep(2)
+        result = check_monitor(monitor)
+
+        history.append(result)
+
+    # Keep latest 200 checks
+    history = history[-200:]
+
+    save_json(DATA_FILE, history)
 
 
 print("Health monitor started...", flush=True)
 
-wait_for_application()
 
 while True:
-    check_health()
+
+    check_all_monitors()
+
     time.sleep(CHECK_INTERVAL)

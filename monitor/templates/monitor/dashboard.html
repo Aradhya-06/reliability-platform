@@ -1,213 +1,792 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Reliability Platform</title>
 
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: #f4f6f8;
-            color: #222;
+            color: #172033;
         }
 
+        /* HEADER */
+
         .header {
-            background: #1f2937;
+            background: #172033;
             color: white;
-            padding: 25px 40px;
+            padding: 30px 6%;
         }
 
         .header h1 {
-            margin: 0;
+            margin: 0 0 8px;
+            font-size: 32px;
         }
 
         .header p {
-            margin-top: 8px;
-            color: #d1d5db;
+            margin: 0;
+            color: #b9c2d0;
+            font-size: 16px;
         }
+
+        /* MAIN */
 
         .container {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 0 20px;
+            width: 88%;
+            max-width: 1250px;
+            margin: 35px auto;
         }
 
-        .status-card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 25px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
-        .status {
+        .top-bar h2 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        .add-btn {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .add-btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* STATS */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .stat {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+
+        .stat-label {
+            color: #667085;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .stat-value {
             font-size: 28px;
             font-weight: bold;
         }
 
+        /* APPLICATIONS */
+
+        .applications {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .name {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .url {
+            margin-top: 7px;
+            color: #667085;
+            word-break: break-all;
+        }
+
+        /* STATUS */
+
+        .status {
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
         .healthy {
-            color: #16a34a;
+            background: #dcfce7;
+            color: #15803d;
         }
 
         .unhealthy {
-            color: #dc2626;
+            background: #fee2e2;
+            color: #b91c1c;
         }
 
-        .stats {
-            display: flex;
+        .unknown {
+            background: #e5e7eb;
+            color: #4b5563;
+        }
+
+        .inactive {
+            background: #fff7ed;
+            color: #c2410c;
+        }
+
+        /* DETAILS */
+
+        .details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            margin-top: 25px;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 22px;
+            padding-top: 20px;
         }
 
-        .stat {
-            flex: 1;
-            background: #f9fafb;
-            padding: 20px;
-            border-radius: 10px;
+        .label {
+            color: #667085;
+            font-size: 13px;
+            margin-bottom: 6px;
         }
 
-        .stat h3 {
-            margin: 0;
-            color: #6b7280;
-            font-size: 14px;
-        }
-
-        .stat p {
-            font-size: 25px;
+        .value {
             font-weight: bold;
-            margin: 10px 0 0;
+            font-size: 16px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
+        /* GRAPH */
+
+        .graph-section {
+            margin-top: 25px;
+            padding: 20px;
+            border: 1px solid #edf0f4;
+            border-radius: 12px;
+            background: #fafbfc;
         }
 
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #e5e7eb;
+        .graph-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
         }
 
-        th {
-            background: #f9fafb;
+        .graph-title {
+            font-size: 15px;
+            font-weight: bold;
         }
 
-        .badge {
-            padding: 5px 10px;
-            border-radius: 15px;
+        .graph-subtitle {
+            font-size: 12px;
+            color: #667085;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 220px;
+        }
+
+        /* ERROR */
+
+        .error {
+            margin-top: 15px;
+            padding: 11px;
+            background: #fee2e2;
+            color: #b91c1c;
+            border-radius: 7px;
             font-size: 13px;
         }
 
-        .badge-healthy {
-            background: #dcfce7;
-            color: #166534;
+        /* BUTTONS */
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 22px;
         }
 
-        .badge-unhealthy {
-            background: #fee2e2;
-            color: #991b1b;
+        .action {
+            padding: 9px 14px;
+            border-radius: 7px;
+            border: 1px solid #d0d5dd;
+            background: white;
+            color: #344054;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 13px;
         }
+
+        .action:hover {
+            background: #f9fafb;
+        }
+
+        .delete {
+            color: #b91c1c;
+        }
+
+        /* EMPTY */
+
+        .empty {
+            background: white;
+            text-align: center;
+            padding: 60px;
+            border-radius: 14px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 800px) {
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .details {
+                grid-template-columns: 1fr;
+            }
+
+            .card-top {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+        }
+
+        @media(max-width: 500px) {
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .top-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .actions {
+                flex-wrap: wrap;
+            }
+
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
-<div class="header">
+<header class="header">
+
     <h1>Reliability Platform</h1>
-    <p>Application Health & Monitoring Dashboard</p>
-</div>
 
-<div class="container">
+    <p>
+        Application Health & Monitoring Dashboard
+    </p>
 
-    <div class="status-card">
+</header>
 
-        <h2>Application Status</h2>
 
-        {% if current_status == "healthy" %}
-            <div class="status healthy">● HEALTHY</div>
-        {% else %}
-            <div class="status unhealthy">● UNHEALTHY</div>
-        {% endif %}
+<main class="container">
 
-        <div class="stats">
 
-            <div class="stat">
-                <h3>Total Checks</h3>
-                <p>{{ total_checks }}</p>
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+        <h2>Monitored Applications</h2>
+
+        <a
+            href="/add_monitor/"
+            class="add-btn"
+        >
+            + Add Application
+        </a>
+
+    </div>
+
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="stat">
+
+            <div class="stat-label">
+                Total Applications
             </div>
 
-            <div class="stat">
-                <h3>Successful Checks</h3>
-                <p>{{ successful_checks }}</p>
-            </div>
-
-            <div class="stat">
-                <h3>Latest Response</h3>
-                <p>{{ latest_response }} ms</p>
+            <div class="stat-value">
+                {{ total_monitors }}
             </div>
 
         </div>
 
-    </div>
+
+        <div class="stat">
+
+            <div class="stat-label">
+                Healthy
+            </div>
+
+            <div class="stat-value">
+                {{ healthy_monitors }}
+            </div>
+
+        </div>
 
 
-    <div class="status-card">
+        <div class="stat">
 
-        <h2>Recent Health Checks</h2>
+            <div class="stat-label">
+                Unhealthy
+            </div>
 
-        <table>
+            <div class="stat-value">
+                {{ unhealthy_monitors }}
+            </div>
 
-            <tr>
-                <th>Timestamp</th>
-                <th>Status</th>
-                <th>Response Time</th>
-            </tr>
+        </div>
 
-            {% for check in history %}
 
-            <tr>
+        <div class="stat">
 
-                <td>{{ check.timestamp }}</td>
+            <div class="stat-label">
+                Average Response
+            </div>
 
-                <td>
+            <div class="stat-value">
 
-                    {% if check.status == "healthy" %}
-                        <span class="badge badge-healthy">
-                            Healthy
-                        </span>
-                    {% else %}
-                        <span class="badge badge-unhealthy">
-                            Unhealthy
-                        </span>
-                    {% endif %}
+                {% if average_response %}
+                    {{ average_response }} ms
+                {% else %}
+                    —
+                {% endif %}
 
-                </td>
+            </div>
 
-                <td>
-                    {% if check.response_time %}
-                        {{ check.response_time }} ms
-                    {% else %}
-                        —
-                    {% endif %}
-                </td>
+        </div>
 
-            </tr>
+    </section>
 
-            {% empty %}
 
-            <tr>
-                <td colspan="3">No health checks recorded yet.</td>
-            </tr>
+    <!-- APPLICATIONS -->
 
-            {% endfor %}
+    <section class="applications">
 
-        </table>
 
-    </div>
+        {% for monitor in monitors %}
 
-</div>
+        <div class="card">
+
+
+            <!-- APPLICATION HEADER -->
+
+            <div class="card-top">
+
+                <div>
+
+                    <div class="name">
+                        {{ monitor.name }}
+                    </div>
+
+                    <div class="url">
+                        {{ monitor.url }}
+                    </div>
+
+                </div>
+
+
+                {% if not monitor.active %}
+
+                    <span class="status inactive">
+                        ● PAUSED
+                    </span>
+
+                {% elif monitor.status == "healthy" %}
+
+                    <span class="status healthy">
+                        ● HEALTHY
+                    </span>
+
+                {% elif monitor.status == "unhealthy" %}
+
+                    <span class="status unhealthy">
+                        ● UNHEALTHY
+                    </span>
+
+                {% else %}
+
+                    <span class="status unknown">
+                        ● UNKNOWN
+                    </span>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- DETAILS -->
+
+            <div class="details">
+
+                <div>
+
+                    <div class="label">
+                        Response Time
+                    </div>
+
+                    <div class="value">
+
+                        {% if monitor.response_time %}
+                            {{ monitor.response_time }} ms
+                        {% else %}
+                            —
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="label">
+                        Last Checked
+                    </div>
+
+                    <div class="value">
+
+                        {% if monitor.timestamp %}
+                            {{ monitor.timestamp }}
+                        {% else %}
+                            Never
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="label">
+                        HTTP Status
+                    </div>
+
+                    <div class="value">
+
+                        {% if monitor.http_status %}
+                            {{ monitor.http_status }}
+                        {% else %}
+                            —
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESPONSE TIME GRAPH -->
+
+            <div class="graph-section">
+
+                <div class="graph-header">
+
+                    <div class="graph-title">
+                        Response Time
+                    </div>
+
+                    <div class="graph-subtitle">
+                        Last 20 checks
+                    </div>
+
+                </div>
+
+                <div class="chart-container">
+
+                    <canvas id="chart-{{ monitor.id }}"></canvas>
+
+                </div>
+
+            </div>
+
+
+            <!-- ERROR -->
+
+            {% if monitor.error %}
+
+            <div class="error">
+                {{ monitor.error }}
+            </div>
+
+            {% endif %}
+
+
+            <!-- EXISTING BUTTONS -->
+
+            <div class="actions">
+
+
+                <a
+                    class="action"
+                    href="/monitor/{{ monitor.id }}/"
+                >
+                    View Details
+                </a>
+
+
+                <form
+                    method="POST"
+                    action="/monitor/{{ monitor.id }}/toggle/"
+                >
+
+                    {% csrf_token %}
+
+                    <button class="action">
+
+                        {% if monitor.active %}
+                            Pause Monitoring
+                        {% else %}
+                            Enable Monitoring
+                        {% endif %}
+
+                    </button>
+
+                </form>
+
+
+                <form
+                    method="POST"
+                    action="/monitor/{{ monitor.id }}/delete/"
+                    onsubmit="return confirm('Delete this monitor?');"
+                >
+
+                    {% csrf_token %}
+
+                    <button class="action delete">
+                        Delete
+                    </button>
+
+                </form>
+
+
+            </div>
+
+
+        </div>
+
+        {% empty %}
+
+
+        <div class="empty">
+
+            <h2>No applications yet</h2>
+
+            <p>
+                Add your first application to start monitoring.
+            </p>
+
+        </div>
+
+
+        {% endfor %}
+
+
+    </section>
+
+
+</main>
+
+
+<!-- GRAPH JAVASCRIPT -->
+
+<script>
+
+{% for monitor in monitors %}
+
+    const chartElement{{ monitor.id }} =
+        document.getElementById(
+            "chart-{{ monitor.id }}"
+        );
+
+    if (chartElement{{ monitor.id }}) {
+
+        const labels{{ monitor.id }} =
+            {{ monitor.graph_labels|safe }};
+
+        const values{{ monitor.id }} =
+            {{ monitor.graph_values|safe }};
+
+
+        new Chart(
+            chartElement{{ monitor.id }},
+            {
+                type: "line",
+
+                data: {
+
+                    labels: labels{{ monitor.id }},
+
+                    datasets: [
+
+                        {
+                            data: values{{ monitor.id }},
+
+                            borderColor: "#2563eb",
+
+                            backgroundColor:
+                                "rgba(37, 99, 235, 0.08)",
+
+                            borderWidth: 2,
+
+                            fill: true,
+
+                            tension: 0.35,
+
+                            pointRadius: 2,
+
+                            pointHoverRadius: 5,
+
+                            spanGaps: true
+                        }
+
+                    ]
+
+                },
+
+
+                options: {
+
+                    responsive: true,
+
+                    maintainAspectRatio: false,
+
+                    interaction: {
+                        intersect: false,
+                        mode: "index"
+                    },
+
+
+                    plugins: {
+
+                        legend: {
+                            display: false
+                        },
+
+
+                        tooltip: {
+
+                            callbacks: {
+
+                                label: function(context) {
+
+                                    return (
+                                        " Response: " +
+                                        context.parsed.y +
+                                        " ms"
+                                    );
+
+                                }
+
+                            }
+
+                        }
+
+                    },
+
+
+                    scales: {
+
+                        x: {
+
+                            grid: {
+                                display: false
+                            },
+
+                            ticks: {
+
+                                maxTicksLimit: 6,
+
+                                color: "#667085",
+
+                                font: {
+                                    size: 11
+                                }
+
+                            }
+
+                        },
+
+
+                        y: {
+
+                            beginAtZero: true,
+
+                            grid: {
+                                color: "#edf0f4"
+                            },
+
+                            ticks: {
+
+                                color: "#667085",
+
+                                callback: function(value) {
+                                    return value + " ms";
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+        );
+
+    }
+
+{% endfor %}
+
+</script>
+
 
 </body>
+
 </html>

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "test website",
+        "url": "https://example.com",
+        "active": true
+    },
+    {
+        "id": 4,
+        "name": "test website2",
+        "url": "https://example2.com",
+        "active": true
+    },
+    {
+        "id": 5,
+        "name": "test website3",
+        "url": "https://example3.com",
+        "active": true
+    },
+    {
+        "id": 6,
+        "name": "My Test Website",
+        "url": "http://host.docker.internal:5001/health",
+        "active": true
+    },
+    {
+        "id": 7,
+        "name": "Example website",
+        "url": "https://example.com",
+        "active": true
+    }
+]

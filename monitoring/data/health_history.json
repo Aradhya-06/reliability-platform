@@ -1,227 +1,1602 @@
 [
     {
-        "timestamp": "2026-09-23 14:35:52",
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:24:19",
         "status": "unhealthy",
-        "response_time": null
+        "response_time": 489.75,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
     },
     {
-        "timestamp": "2026-09-23 14:36:02",
-        "status": "healthy",
-        "response_time": 3.29
-    },
-    {
-        "timestamp": "2026-09-23 14:36:12",
-        "status": "healthy",
-        "response_time": 2.49
-    },
-    {
-        "timestamp": "2026-09-23 14:36:22",
-        "status": "healthy",
-        "response_time": 2.74
-    },
-    {
-        "timestamp": "2026-09-23 14:36:32",
-        "status": "healthy",
-        "response_time": 2.75
-    },
-    {
-        "timestamp": "2026-09-23 14:36:42",
-        "status": "healthy",
-        "response_time": 2.11
-    },
-    {
-        "timestamp": "2026-09-23 14:36:52",
-        "status": "healthy",
-        "response_time": 1.75
-    },
-    {
-        "timestamp": "2026-09-23 14:37:02",
-        "status": "healthy",
-        "response_time": 3.91
-    },
-    {
-        "timestamp": "2026-09-23 14:37:12",
-        "status": "healthy",
-        "response_time": 2.55
-    },
-    {
-        "timestamp": "2026-09-23 14:37:22",
-        "status": "healthy",
-        "response_time": 2.22
-    },
-    {
-        "timestamp": "2026-09-23 14:38:11",
-        "status": "healthy",
-        "response_time": 3.44
-    },
-    {
-        "timestamp": "2026-09-23 14:38:21",
-        "status": "healthy",
-        "response_time": 1.98
-    },
-    {
-        "timestamp": "2026-09-23 14:38:31",
-        "status": "healthy",
-        "response_time": 2.05
-    },
-    {
-        "timestamp": "2026-09-23 14:43:48",
-        "status": "healthy",
-        "response_time": 5.22
-    },
-    {
-        "timestamp": "2026-09-23 14:43:58",
-        "status": "healthy",
-        "response_time": 4.15
-    },
-    {
-        "timestamp": "2026-09-23 14:44:08",
-        "status": "healthy",
-        "response_time": 3.13
-    },
-    {
-        "timestamp": "2026-09-23 14:44:18",
-        "status": "healthy",
-        "response_time": 2.68
-    },
-    {
-        "timestamp": "2026-09-23 14:44:28",
-        "status": "healthy",
-        "response_time": 2.74
-    },
-    {
-        "timestamp": "2026-09-23 14:44:38",
-        "status": "healthy",
-        "response_time": 2.89
-    },
-    {
-        "timestamp": "2026-09-23 14:44:48",
-        "status": "healthy",
-        "response_time": 35.86
-    },
-    {
-        "timestamp": "2026-09-23 14:44:58",
-        "status": "healthy",
-        "response_time": 33.86
-    },
-    {
-        "timestamp": "2026-09-23 14:45:09",
-        "status": "healthy",
-        "response_time": 29.6
-    },
-    {
-        "timestamp": "2026-09-23 14:45:19",
-        "status": "healthy",
-        "response_time": 52.65
-    },
-    {
-        "timestamp": "2026-09-23 14:45:29",
-        "status": "healthy",
-        "response_time": 4.72
-    },
-    {
-        "timestamp": "2026-09-23 14:45:40",
-        "status": "healthy",
-        "response_time": 39.66
-    },
-    {
-        "timestamp": "2026-09-23 14:45:50",
-        "status": "healthy",
-        "response_time": 18.34
-    },
-    {
-        "timestamp": "2026-09-23 14:46:00",
-        "status": "healthy",
-        "response_time": 4.86
-    },
-    {
-        "timestamp": "2026-09-23 14:46:10",
-        "status": "healthy",
-        "response_time": 11.05
-    },
-    {
-        "timestamp": "2026-09-23 14:46:20",
-        "status": "healthy",
-        "response_time": 22.64
-    },
-    {
-        "timestamp": "2026-09-23 14:46:30",
-        "status": "healthy",
-        "response_time": 6.71
-    },
-    {
-        "timestamp": "2026-09-23 14:46:40",
-        "status": "healthy",
-        "response_time": 10.97
-    },
-    {
-        "timestamp": "2026-09-23 14:46:51",
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:24:20",
         "status": "unhealthy",
-        "response_time": null
+        "response_time": 92.25,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
     },
     {
-        "timestamp": "2026-09-23 14:47:01",
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:24:20",
         "status": "healthy",
-        "response_time": 4.73
+        "response_time": 231.75,
+        "http_status": 200,
+        "error": null
     },
     {
-        "timestamp": "2026-09-23 14:47:11",
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:24:20",
         "status": "healthy",
-        "response_time": 3.36
+        "response_time": 78.1,
+        "http_status": 200,
+        "error": null
     },
     {
-        "timestamp": "2026-09-23 14:47:21",
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:24:30",
         "status": "healthy",
-        "response_time": 3.71
+        "response_time": 77.43,
+        "http_status": 200,
+        "error": null
     },
     {
-        "timestamp": "2026-09-23 14:47:31",
-        "status": "healthy",
-        "response_time": 2.44
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:24:30",
+        "status": "unhealthy",
+        "response_time": 278.38,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
     },
     {
-        "timestamp": "2026-09-23 14:47:41",
-        "status": "healthy",
-        "response_time": 3.08
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:24:31",
+        "status": "unhealthy",
+        "response_time": 62.91,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
     },
     {
-        "timestamp": "2026-09-23 14:47:51",
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:24:31",
         "status": "healthy",
-        "response_time": 3.4
+        "response_time": 15.7,
+        "http_status": 200,
+        "error": null
     },
     {
-        "timestamp": "2026-09-23 14:48:01",
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:24:31",
         "status": "healthy",
-        "response_time": 3.31
+        "response_time": 65.01,
+        "http_status": 200,
+        "error": null
     },
     {
-        "timestamp": "2026-09-23 14:48:11",
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:24:41",
         "status": "healthy",
-        "response_time": 9.03
+        "response_time": 64.87,
+        "http_status": 200,
+        "error": null
     },
     {
-        "timestamp": "2026-09-23 14:48:21",
-        "status": "healthy",
-        "response_time": 4.16
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:24:41",
+        "status": "unhealthy",
+        "response_time": 303.1,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
     },
     {
-        "timestamp": "2026-09-23 14:48:31",
-        "status": "healthy",
-        "response_time": 2.71
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:24:41",
+        "status": "unhealthy",
+        "response_time": 203.69,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
     },
     {
-        "timestamp": "2026-09-23 14:48:41",
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:24:41",
         "status": "healthy",
-        "response_time": 4.04
+        "response_time": 206.86,
+        "http_status": 200,
+        "error": null
     },
     {
-        "timestamp": "2026-09-23 14:48:51",
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:24:42",
         "status": "healthy",
-        "response_time": 2.42
+        "response_time": 183.66,
+        "http_status": 200,
+        "error": null
     },
     {
-        "timestamp": "2026-09-23 14:49:01",
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:24:52",
         "status": "healthy",
-        "response_time": 2.68
+        "response_time": 61.85,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:24:52",
+        "status": "unhealthy",
+        "response_time": 262.57,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:24:52",
+        "status": "unhealthy",
+        "response_time": 122.98,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:24:52",
+        "status": "healthy",
+        "response_time": 20.38,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:24:52",
+        "status": "healthy",
+        "response_time": 72.1,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:25:02",
+        "status": "unhealthy",
+        "response_time": 462.63,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:25:03",
+        "status": "unhealthy",
+        "response_time": 65.68,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:25:03",
+        "status": "healthy",
+        "response_time": 11.91,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:25:03",
+        "status": "healthy",
+        "response_time": 82.11,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:25:13",
+        "status": "unhealthy",
+        "response_time": 302.59,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:25:13",
+        "status": "unhealthy",
+        "response_time": 66.8,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:25:13",
+        "status": "healthy",
+        "response_time": 14.56,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:25:13",
+        "status": "healthy",
+        "response_time": 70.52,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:25:24",
+        "status": "healthy",
+        "response_time": 102.01,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:25:24",
+        "status": "unhealthy",
+        "response_time": 416.81,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:25:24",
+        "status": "unhealthy",
+        "response_time": 199.28,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:25:24",
+        "status": "healthy",
+        "response_time": 133.96,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:25:24",
+        "status": "healthy",
+        "response_time": 279.1,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:25:35",
+        "status": "healthy",
+        "response_time": 192.34,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:25:35",
+        "status": "unhealthy",
+        "response_time": 510.71,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:25:35",
+        "status": "unhealthy",
+        "response_time": 91.5,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:25:36",
+        "status": "healthy",
+        "response_time": 15.58,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:25:36",
+        "status": "healthy",
+        "response_time": 193.85,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:25:46",
+        "status": "healthy",
+        "response_time": 96.39,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:25:46",
+        "status": "unhealthy",
+        "response_time": 282.52,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:25:46",
+        "status": "unhealthy",
+        "response_time": 75.82,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:25:46",
+        "status": "healthy",
+        "response_time": 18.88,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:25:46",
+        "status": "healthy",
+        "response_time": 79.78,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:25:56",
+        "status": "healthy",
+        "response_time": 94.71,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:25:56",
+        "status": "unhealthy",
+        "response_time": 373.42,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:25:57",
+        "status": "unhealthy",
+        "response_time": 212.27,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:25:57",
+        "status": "healthy",
+        "response_time": 94.55,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:26:08",
+        "status": "healthy",
+        "response_time": 388.52,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:26:08",
+        "status": "unhealthy",
+        "response_time": 310.74,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:26:08",
+        "status": "unhealthy",
+        "response_time": 305.7,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:26:09",
+        "status": "healthy",
+        "response_time": 21.84,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:26:19",
+        "status": "healthy",
+        "response_time": 80.71,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:26:19",
+        "status": "unhealthy",
+        "response_time": 433.01,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:26:19",
+        "status": "unhealthy",
+        "response_time": 1085.76,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:26:20",
+        "status": "healthy",
+        "response_time": 85.41,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:26:30",
+        "status": "healthy",
+        "response_time": 142.69,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:26:31",
+        "status": "unhealthy",
+        "response_time": 531.31,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:26:31",
+        "status": "unhealthy",
+        "response_time": 182.89,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:26:31",
+        "status": "healthy",
+        "response_time": 27.39,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:26:41",
+        "status": "healthy",
+        "response_time": 129.33,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:26:41",
+        "status": "unhealthy",
+        "response_time": 413.68,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:26:42",
+        "status": "unhealthy",
+        "response_time": 200.29,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:26:42",
+        "status": "healthy",
+        "response_time": 18.02,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:26:52",
+        "status": "healthy",
+        "response_time": 288.26,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:26:52",
+        "status": "unhealthy",
+        "response_time": 718.59,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:26:53",
+        "status": "unhealthy",
+        "response_time": 202.69,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:26:53",
+        "status": "healthy",
+        "response_time": 15.74,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:27:03",
+        "status": "healthy",
+        "response_time": 239.25,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:27:04",
+        "status": "unhealthy",
+        "response_time": 710.87,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:27:04",
+        "status": "unhealthy",
+        "response_time": 314.99,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:27:05",
+        "status": "healthy",
+        "response_time": 20.67,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:27:15",
+        "status": "healthy",
+        "response_time": 350.82,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:27:15",
+        "status": "unhealthy",
+        "response_time": 544.01,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:27:16",
+        "status": "unhealthy",
+        "response_time": 174.7,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:27:16",
+        "status": "healthy",
+        "response_time": 13.8,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:27:26",
+        "status": "healthy",
+        "response_time": 228.02,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:27:26",
+        "status": "unhealthy",
+        "response_time": 308.78,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:27:26",
+        "status": "unhealthy",
+        "response_time": 201.34,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:27:27",
+        "status": "healthy",
+        "response_time": 69.65,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:27:37",
+        "status": "healthy",
+        "response_time": 139.93,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:27:37",
+        "status": "unhealthy",
+        "response_time": 401.41,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:27:37",
+        "status": "unhealthy",
+        "response_time": 73.23,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:27:37",
+        "status": "healthy",
+        "response_time": 21.82,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:27:48",
+        "status": "healthy",
+        "response_time": 789.78,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:27:48",
+        "status": "unhealthy",
+        "response_time": 622.33,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:27:49",
+        "status": "unhealthy",
+        "response_time": 716.18,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:27:50",
+        "status": "healthy",
+        "response_time": 22.52,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:28:00",
+        "status": "healthy",
+        "response_time": 404.17,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:28:00",
+        "status": "unhealthy",
+        "response_time": 360.23,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:28:01",
+        "status": "unhealthy",
+        "response_time": 423.91,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:28:01",
+        "status": "healthy",
+        "response_time": 16.21,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:28:11",
+        "status": "healthy",
+        "response_time": 396.72,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:28:11",
+        "status": "unhealthy",
+        "response_time": 311.66,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:28:12",
+        "status": "unhealthy",
+        "response_time": 225.62,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:28:12",
+        "status": "healthy",
+        "response_time": 67.18,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:28:22",
+        "status": "healthy",
+        "response_time": 317.99,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:28:22",
+        "status": "unhealthy",
+        "response_time": 307.88,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:28:23",
+        "status": "unhealthy",
+        "response_time": 141.93,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:28:23",
+        "status": "healthy",
+        "response_time": 9.34,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:28:33",
+        "status": "healthy",
+        "response_time": 954.89,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:28:34",
+        "status": "unhealthy",
+        "response_time": 446.12,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:28:34",
+        "status": "unhealthy",
+        "response_time": 328.3,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:28:35",
+        "status": "healthy",
+        "response_time": 19.45,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:28:45",
+        "status": "healthy",
+        "response_time": 164.22,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:28:45",
+        "status": "unhealthy",
+        "response_time": 499.21,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:28:45",
+        "status": "unhealthy",
+        "response_time": 315.96,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:28:46",
+        "status": "healthy",
+        "response_time": 16.9,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:28:56",
+        "status": "healthy",
+        "response_time": 165.48,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:28:56",
+        "status": "unhealthy",
+        "response_time": 926.72,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:28:57",
+        "status": "unhealthy",
+        "response_time": 176.8,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:28:57",
+        "status": "healthy",
+        "response_time": 16.26,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:29:07",
+        "status": "healthy",
+        "response_time": 146.73,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:29:07",
+        "status": "unhealthy",
+        "response_time": 889.11,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:29:08",
+        "status": "unhealthy",
+        "response_time": 205.7,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:29:08",
+        "status": "healthy",
+        "response_time": 20.17,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:29:18",
+        "status": "healthy",
+        "response_time": 55.76,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:29:18",
+        "status": "unhealthy",
+        "response_time": 836.32,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:29:19",
+        "status": "unhealthy",
+        "response_time": 87.33,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:29:19",
+        "status": "healthy",
+        "response_time": 8.31,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:29:29",
+        "status": "healthy",
+        "response_time": 111.29,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:29:29",
+        "status": "unhealthy",
+        "response_time": 825.01,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:29:30",
+        "status": "unhealthy",
+        "response_time": 186.77,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:29:30",
+        "status": "healthy",
+        "response_time": 19.94,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:29:41",
+        "status": "healthy",
+        "response_time": 68.43,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:29:41",
+        "status": "unhealthy",
+        "response_time": 750.71,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:29:41",
+        "status": "unhealthy",
+        "response_time": 69.22,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:29:41",
+        "status": "healthy",
+        "response_time": 20.38,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:29:52",
+        "status": "healthy",
+        "response_time": 209.64,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:29:52",
+        "status": "unhealthy",
+        "response_time": 919.94,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:29:53",
+        "status": "unhealthy",
+        "response_time": 115.92,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:29:53",
+        "status": "healthy",
+        "response_time": 91.91,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:30:03",
+        "status": "healthy",
+        "response_time": 70.8,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:30:03",
+        "status": "unhealthy",
+        "response_time": 870.92,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:30:04",
+        "status": "unhealthy",
+        "response_time": 69.41,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:30:04",
+        "status": "healthy",
+        "response_time": 15.59,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:38:17",
+        "status": "healthy",
+        "response_time": 244.41,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:38:17",
+        "status": "unhealthy",
+        "response_time": 780.83,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:38:18",
+        "status": "unhealthy",
+        "response_time": 132.34,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:38:18",
+        "status": "healthy",
+        "response_time": 97.77,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:38:28",
+        "status": "healthy",
+        "response_time": 122.99,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:38:28",
+        "status": "unhealthy",
+        "response_time": 989.24,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:38:29",
+        "status": "unhealthy",
+        "response_time": 307.0,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:38:30",
+        "status": "healthy",
+        "response_time": 22.48,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:38:40",
+        "status": "healthy",
+        "response_time": 450.96,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:38:40",
+        "status": "unhealthy",
+        "response_time": 654.28,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:38:41",
+        "status": "unhealthy",
+        "response_time": 291.22,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:38:41",
+        "status": "healthy",
+        "response_time": 16.46,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:38:51",
+        "status": "healthy",
+        "response_time": 187.2,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:38:51",
+        "status": "unhealthy",
+        "response_time": 288.93,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:38:52",
+        "status": "unhealthy",
+        "response_time": 107.8,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:38:52",
+        "status": "healthy",
+        "response_time": 21.3,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:39:02",
+        "status": "healthy",
+        "response_time": 76.17,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:39:02",
+        "status": "unhealthy",
+        "response_time": 305.76,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:39:02",
+        "status": "unhealthy",
+        "response_time": 89.38,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:39:02",
+        "status": "healthy",
+        "response_time": 17.34,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:39:02",
+        "status": "healthy",
+        "response_time": 226.78,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:39:13",
+        "status": "healthy",
+        "response_time": 58.91,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:39:13",
+        "status": "unhealthy",
+        "response_time": 526.42,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:39:13",
+        "status": "unhealthy",
+        "response_time": 136.36,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:39:13",
+        "status": "healthy",
+        "response_time": 15.84,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:39:13",
+        "status": "healthy",
+        "response_time": 152.49,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:39:24",
+        "status": "healthy",
+        "response_time": 217.63,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:39:24",
+        "status": "unhealthy",
+        "response_time": 298.12,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:39:24",
+        "status": "unhealthy",
+        "response_time": 212.12,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:39:24",
+        "status": "healthy",
+        "response_time": 17.16,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:39:24",
+        "status": "healthy",
+        "response_time": 71.24,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:39:34",
+        "status": "healthy",
+        "response_time": 196.52,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:39:35",
+        "status": "unhealthy",
+        "response_time": 515.95,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:39:35",
+        "status": "unhealthy",
+        "response_time": 204.32,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:39:35",
+        "status": "healthy",
+        "response_time": 28.17,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:39:35",
+        "status": "healthy",
+        "response_time": 275.33,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-25 18:39:46",
+        "status": "healthy",
+        "response_time": 106.9,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-25 18:39:46",
+        "status": "unhealthy",
+        "response_time": 347.47,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-25 18:39:46",
+        "status": "unhealthy",
+        "response_time": 139.78,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-25 18:39:46",
+        "status": "healthy",
+        "response_time": 17.03,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-25 18:39:46",
+        "status": "healthy",
+        "response_time": 125.91,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 00:12:51",
+        "status": "healthy",
+        "response_time": 745.7,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 00:12:52",
+        "status": "unhealthy",
+        "response_time": 620.58,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 00:12:53",
+        "status": "unhealthy",
+        "response_time": 409.85,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 00:12:53",
+        "status": "healthy",
+        "response_time": 373.86,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 00:12:54",
+        "status": "healthy",
+        "response_time": 128.94,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 00:13:04",
+        "status": "healthy",
+        "response_time": 94.92,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 00:13:04",
+        "status": "unhealthy",
+        "response_time": 274.31,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 00:13:04",
+        "status": "unhealthy",
+        "response_time": 78.58,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 00:13:04",
+        "status": "healthy",
+        "response_time": 25.47,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 00:13:04",
+        "status": "healthy",
+        "response_time": 75.17,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 00:13:14",
+        "status": "healthy",
+        "response_time": 485.32,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 00:13:15",
+        "status": "unhealthy",
+        "response_time": 850.38,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 00:13:16",
+        "status": "unhealthy",
+        "response_time": 417.58,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 00:13:16",
+        "status": "healthy",
+        "response_time": 14.65,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 00:13:16",
+        "status": "healthy",
+        "response_time": 387.81,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 00:13:27",
+        "status": "healthy",
+        "response_time": 211.74,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 00:13:27",
+        "status": "unhealthy",
+        "response_time": 408.22,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 00:13:27",
+        "status": "unhealthy",
+        "response_time": 144.25,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 00:13:27",
+        "status": "healthy",
+        "response_time": 16.41,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 00:13:27",
+        "status": "healthy",
+        "response_time": 182.27,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 00:13:38",
+        "status": "healthy",
+        "response_time": 308.63,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 00:13:38",
+        "status": "unhealthy",
+        "response_time": 970.9,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 00:13:39",
+        "status": "unhealthy",
+        "response_time": 2221.3,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 00:13:41",
+        "status": "healthy",
+        "response_time": 14.14,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 00:13:41",
+        "status": "healthy",
+        "response_time": 212.51,
+        "http_status": 200,
+        "error": null
     }
 ]

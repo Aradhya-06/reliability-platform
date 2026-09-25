@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Add Monitor</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #172033;
+        }
+
+        .header {
+            background: #172033;
+            color: white;
+            padding: 28px 7%;
+        }
+
+        .header h1 {
+            margin: 0 0 8px;
+            font-size: 30px;
+        }
+
+        .header p {
+            margin: 0;
+            color: #b9c2d0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            margin: 55px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 27px;
+        }
+
+        .description {
+            color: #667085;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #d0d5dd;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+        }
+
+        .hint {
+            margin-top: 7px;
+            color: #667085;
+            font-size: 13px;
+        }
+
+        .error {
+            background: #fee2e2;
+            color: #b91c1c;
+            padding: 13px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        button,
+        .back-btn {
+            padding: 13px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        button {
+            border: none;
+            background: #2563eb;
+            color: white;
+            flex: 1;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .back-btn {
+            border: 1px solid #d0d5dd;
+            color: #344054;
+            background: white;
+        }
+
+        .example {
+            background: #f8fafc;
+            border: 1px solid #e4e7ec;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #475467;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header class="header">
+
+        <h1>Reliability Platform</h1>
+
+        <p>
+            Application Health & Monitoring
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+        <div class="card">
+
+            <h2>Add an Application</h2>
+
+            <p class="description">
+                Add a website or application that you want
+                Reliability Platform to monitor automatically.
+            </p>
+
+
+            {% if error %}
+
+                <div class="error">
+                    {{ error }}
+                </div>
+
+            {% endif %}
+
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Application Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="e.g. My Portfolio"
+                        required
+                    >
+
+                    <div class="hint">
+                        Give your application a recognizable name.
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="url">
+                        Application URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="url"
+                        name="url"
+                        placeholder="https://example.com"
+                        required
+                    >
+
+                    <div class="hint">
+                        The URL should include http:// or https://
+                    </div>
+
+                </div>
+
+
+                <div class="buttons">
+
+                    <a
+                        href="/dashboard/"
+                        class="back-btn"
+                    >
+                        Cancel
+                    </a>
+
+                    <button type="submit">
+                        Add Monitor
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <div class="example">
+
+                <strong>How it works:</strong><br><br>
+
+                After adding an application, the monitoring
+                service checks it automatically every
+                <strong>10 seconds</strong> and records its
+                status and response time.
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
