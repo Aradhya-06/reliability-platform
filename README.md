@@ -343,6 +343,3 @@ The project demonstrates concepts including:
 * Infrastructure as Code
 * Continuous Integration
 * Cloud deployment
-
-```
-
