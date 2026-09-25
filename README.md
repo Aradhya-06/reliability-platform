@@ -1,3 +1,76 @@
+Yes. The GitHub structure now looks good. 👍
+
+The **red ❌ next to `complete dashboard`** is not a Git/GitHub push failure. It most likely means the **GitHub Actions CI workflow failed for that commit**.
+
+Your repository shows:
+
+```text
+.github/workflows/   ← CI pipeline
+config/
+monitor/
+monitoring/
+terraform/
+Dockerfile
+docker-compose.yml
+manage.py
+requirements.txt
+```
+
+That's actually a good structure for the project.
+
+## 1. What does the red ❌ mean?
+
+You can click the **red ❌** next to:
+
+> `complete dashboard`
+
+GitHub should take you to the commit/check details.
+
+You'll probably see something like:
+
+```text
+Checks
+❌ CI
+```
+
+Click **Details** and it will show the exact step that failed.
+
+It could be something like:
+
+```text
+Install dependencies       ✓
+Django checks              ✓
+Run tests                  ❌
+Docker build               —
+```
+
+or:
+
+```text
+Docker build               ❌
+```
+
+**Don't change anything yet.** Send me a screenshot of that CI failure page and we'll fix the actual problem rather than guessing.
+
+---
+
+# 2. README.md for your project
+
+Your README should make it immediately clear to your teacher/interviewer:
+
+**What is this? → How does it work? → What technologies did you use? → How do I run it?**
+
+Create:
+
+```text
+README.md
+```
+
+in the root of your repository.
+
+You can paste this:
+
+````markdown
 # Reliability Platform
 
 A lightweight application monitoring and health-check platform built using Django, Docker, and Terraform.
@@ -67,3 +140,328 @@ The collected monitoring data is displayed through a web dashboard.
                      |
                      v
              JSON data files
+````
+
+---
+
+## Technology Stack
+
+### Backend
+
+* Python
+* Django
+
+### Monitoring
+
+* Python
+* HTTP requests
+* Periodic health checks
+* Response-time measurement
+
+### Frontend
+
+* HTML
+* CSS
+* Django Templates
+* JavaScript where required
+
+### Containerization
+
+* Docker
+* Docker Compose
+
+### Infrastructure
+
+* Terraform
+* AWS infrastructure configuration
+
+### CI/CD
+
+* GitHub Actions
+
+---
+
+## How Monitoring Works
+
+When a user adds an application, the platform stores its name and URL.
+
+The monitoring service periodically checks the configured URL.
+
+For every check, the following information is recorded:
+
+```text
+Monitor ID
+Timestamp
+Health status
+Response time
+HTTP status code
+Error message
+```
+
+For example:
+
+```json
+{
+    "monitor_id": 1,
+    "timestamp": "2026-09-25 16:33:46",
+    "status": "healthy",
+    "response_time": 98.77,
+    "http_status": 200,
+    "error": null
+}
+```
+
+A successful HTTP response is reported as healthy.
+
+Errors such as HTTP failures, connection errors, or timeouts are reported as unhealthy.
+
+---
+
+## Project Structure
+
+```text
+reliability-platform/
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+├── config/
+│   ├── settings.py
+│   ├── urls.py
+│   └── ...
+│
+├── monitor/
+│   ├── templates/
+│   │   └── monitor/
+│   │       ├── dashboard.html
+│   │       ├── add_monitor.html
+│   │       └── monitor_detail.html
+│   │
+│   ├── urls.py
+│   ├── views.py
+│   └── ...
+│
+├── monitoring/
+│   ├── data/
+│   │   ├── health_history.json
+│   │   └── monitors.json
+│   │
+│   └── monitor.py
+│
+├── terraform/
+│   ├── main.tf
+│   ├── outputs.tf
+│   └── .terraform.lock.hcl
+│
+├── Dockerfile
+├── docker-compose.yml
+├── manage.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Running the Project
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Aradhya-06/reliability-platform.git
+cd reliability-platform
+```
+
+### 2. Build the Docker containers
+
+```bash
+docker compose build
+```
+
+### 3. Start the application
+
+```bash
+docker compose up
+```
+
+The Django application can then be accessed through the configured localhost port.
+
+---
+
+## Docker Services
+
+The project separates the Django application and monitoring process.
+
+### Web Service
+
+Runs the Django application and provides:
+
+* Dashboard
+* Add Monitor interface
+* Health endpoint
+* Monitor details
+
+### Monitor Service
+
+Runs the monitoring process independently.
+
+It periodically checks the configured applications and records monitoring information.
+
+This separation allows the monitoring service to continue checking applications independently of the dashboard logic.
+
+---
+
+## Example Monitoring Results
+
+### Healthy Application
+
+```text
+Status: HEALTHY
+HTTP Status: 200
+Response Time: 18.88 ms
+```
+
+### Unhealthy Application
+
+```text
+Status: UNHEALTHY
+HTTP Status: 403
+Response Time: 879.46 ms
+Error: HTTP 403: Forbidden
+```
+
+The dashboard displays these results for each monitored application.
+
+---
+
+## CI Pipeline
+
+The project uses GitHub Actions for continuous integration.
+
+The CI pipeline is intended to automatically verify the project whenever changes are pushed to GitHub.
+
+The pipeline includes checks such as:
+
+```text
+Git Push
+   |
+   v
+GitHub Actions
+   |
+   +--> Install dependencies
+   |
+   +--> Django checks
+   |
+   +--> Run tests
+   |
+   +--> Build Docker image
+   |
+   v
+Build verified
+```
+
+---
+
+## Terraform
+
+Terraform configuration is included in the project to define infrastructure as code.
+
+Terraform files are stored in:
+
+```text
+terraform/
+```
+
+The `.terraform/` directory is intentionally excluded from Git because it contains downloaded provider binaries.
+
+Typical Terraform commands are:
+
+```bash
+terraform init
+terraform validate
+terraform plan
+```
+
+Infrastructure can then be provisioned after reviewing the generated plan.
+
+---
+
+## Future Improvements
+
+Possible future improvements include:
+
+* AWS deployment
+* Automated deployment through GitHub Actions
+* Persistent database instead of JSON storage
+* User authentication
+* Email or notification alerts
+* Uptime percentage calculation
+* More detailed monitoring analytics
+* Historical response-time graphs
+* Scalable monitoring workers
+* Production deployment architecture
+
+---
+
+## Project Goal
+
+The goal of the Reliability Platform is to provide a simple monitoring system that allows users to track the availability and response performance of their own applications.
+
+The project demonstrates concepts including:
+
+* Web application development
+* Application monitoring
+* HTTP health checks
+* Docker containerization
+* Infrastructure as Code
+* Continuous Integration
+* Cloud deployment
+
+```
+
+---
+
+## 3. One thing I'd change in the README later
+
+Right now I've deliberately written:
+
+> **Terraform infrastructure configuration**
+
+and
+
+> **AWS deployment**
+
+under future improvements.
+
+That's because **we haven't actually finished the AWS deployment yet**.
+
+Don't claim:
+
+> "Deployed on AWS"
+
+until we actually deploy it.
+
+Similarly, don't claim:
+
+> "Fully automated CI/CD deployment"
+
+until we connect GitHub Actions to the AWS deployment.
+
+That keeps your README technically honest.
+
+---
+
+# Now our immediate next task
+
+Your repository is pushed. ✅  
+Terraform is in GitHub. ✅  
+`.terraform` provider junk is excluded. ✅  
+Dashboard is working. ✅  
+Monitoring is working. ✅
+
+**Next: fix that red ❌ CI check.**
+
+Click the red ❌ beside `complete dashboard` → **Details** → send me the screenshot of the failed workflow.
+
+Then we'll fix `ci.yml`, get the **green ✅**, and only after that move into **Terraform + AWS**.
+```
