@@ -346,5 +346,3 @@ The project demonstrates concepts including:
 
 ```
 
-d only after that move into **Terraform + AWS**.
-```
