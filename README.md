@@ -346,49 +346,5 @@ The project demonstrates concepts including:
 
 ```
 
----
-
-## 3. One thing I'd change in the README later
-
-Right now I've deliberately written:
-
-> **Terraform infrastructure configuration**
-
-and
-
-> **AWS deployment**
-
-under future improvements.
-
-That's because **we haven't actually finished the AWS deployment yet**.
-
-Don't claim:
-
-> "Deployed on AWS"
-
-until we actually deploy it.
-
-Similarly, don't claim:
-
-> "Fully automated CI/CD deployment"
-
-until we connect GitHub Actions to the AWS deployment.
-
-That keeps your README technically honest.
-
----
-
-# Now our immediate next task
-
-Your repository is pushed. ✅  
-Terraform is in GitHub. ✅  
-`.terraform` provider junk is excluded. ✅  
-Dashboard is working. ✅  
-Monitoring is working. ✅
-
-**Next: fix that red ❌ CI check.**
-
-Click the red ❌ beside `complete dashboard` → **Details** → send me the screenshot of the failed workflow.
-
-Then we'll fix `ci.yml`, get the **green ✅**, and only after that move into **Terraform + AWS**.
+d only after that move into **Terraform + AWS**.
 ```
