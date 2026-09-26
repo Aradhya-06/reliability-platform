@@ -40,6 +40,7 @@
             font-size: 16px;
         }
 
+
         /* MAIN */
 
         .container {
@@ -47,6 +48,7 @@
             max-width: 1250px;
             margin: 35px auto;
         }
+
 
         .top-bar {
             display: flex;
@@ -59,6 +61,7 @@
             margin: 0;
             font-size: 25px;
         }
+
 
         .add-btn {
             background: #2563eb;
@@ -73,6 +76,7 @@
         .add-btn:hover {
             background: #1d4ed8;
         }
+
 
         /* STATS */
 
@@ -101,6 +105,7 @@
             font-weight: bold;
         }
 
+
         /* APPLICATIONS */
 
         .applications {
@@ -115,6 +120,7 @@
             border-radius: 16px;
             box-shadow: 0 3px 15px rgba(0,0,0,0.06);
         }
+
 
         .card-top {
             display: flex;
@@ -132,6 +138,7 @@
             color: #667085;
             word-break: break-all;
         }
+
 
         /* STATUS */
 
@@ -163,6 +170,7 @@
             color: #c2410c;
         }
 
+
         /* DETAILS */
 
         .details {
@@ -184,6 +192,7 @@
             font-weight: bold;
             font-size: 16px;
         }
+
 
         /* GRAPH */
 
@@ -215,7 +224,9 @@
         .chart-container {
             position: relative;
             height: 220px;
+            width: 100%;
         }
+
 
         /* ERROR */
 
@@ -227,6 +238,7 @@
             border-radius: 7px;
             font-size: 13px;
         }
+
 
         /* BUTTONS */
 
@@ -255,6 +267,7 @@
             color: #b91c1c;
         }
 
+
         /* EMPTY */
 
         .empty {
@@ -263,6 +276,7 @@
             padding: 60px;
             border-radius: 14px;
         }
+
 
         /* RESPONSIVE */
 
@@ -282,6 +296,7 @@
             }
 
         }
+
 
         @media(max-width: 500px) {
 
@@ -308,6 +323,7 @@
 
 <body>
 
+
 <header class="header">
 
     <h1>Reliability Platform</h1>
@@ -319,6 +335,7 @@
 </header>
 
 
+
 <main class="container">
 
 
@@ -326,7 +343,9 @@
 
     <div class="top-bar">
 
-        <h2>Monitored Applications</h2>
+        <h2>
+            Monitored Applications
+        </h2>
 
         <a
             href="/add_monitor/"
@@ -338,9 +357,11 @@
     </div>
 
 
+
     <!-- STATS -->
 
     <section class="stats">
+
 
         <div class="stat">
 
@@ -353,6 +374,7 @@
             </div>
 
         </div>
+
 
 
         <div class="stat">
@@ -368,6 +390,7 @@
         </div>
 
 
+
         <div class="stat">
 
             <div class="stat-label">
@@ -379,6 +402,7 @@
             </div>
 
         </div>
+
 
 
         <div class="stat">
@@ -399,7 +423,9 @@
 
         </div>
 
+
     </section>
+
 
 
     <!-- APPLICATIONS -->
@@ -408,6 +434,7 @@
 
 
         {% for monitor in monitors %}
+
 
         <div class="card">
 
@@ -427,6 +454,7 @@
                     </div>
 
                 </div>
+
 
 
                 {% if not monitor.active %}
@@ -455,12 +483,15 @@
 
                 {% endif %}
 
+
             </div>
+
 
 
             <!-- DETAILS -->
 
             <div class="details">
+
 
                 <div>
 
@@ -479,6 +510,7 @@
                     </div>
 
                 </div>
+
 
 
                 <div>
@@ -500,6 +532,7 @@
                 </div>
 
 
+
                 <div>
 
                     <div class="label">
@@ -518,7 +551,9 @@
 
                 </div>
 
+
             </div>
+
 
 
             <!-- RESPONSE TIME GRAPH -->
@@ -537,13 +572,17 @@
 
                 </div>
 
+
                 <div class="chart-container">
 
-                    <canvas id="chart-{{ monitor.id }}"></canvas>
+                    <canvas
+                        id="chart-{{ monitor.id }}"
+                    ></canvas>
 
                 </div>
 
             </div>
+
 
 
             <!-- ERROR -->
@@ -557,7 +596,8 @@
             {% endif %}
 
 
-            <!-- EXISTING BUTTONS -->
+
+            <!-- BUTTONS -->
 
             <div class="actions">
 
@@ -570,6 +610,7 @@
                 </a>
 
 
+
                 <form
                     method="POST"
                     action="/monitor/{{ monitor.id }}/toggle/"
@@ -577,7 +618,10 @@
 
                     {% csrf_token %}
 
-                    <button class="action">
+                    <button
+                        type="submit"
+                        class="action"
+                    >
 
                         {% if monitor.active %}
                             Pause Monitoring
@@ -590,6 +634,7 @@
                 </form>
 
 
+
                 <form
                     method="POST"
                     action="/monitor/{{ monitor.id }}/delete/"
@@ -598,7 +643,10 @@
 
                     {% csrf_token %}
 
-                    <button class="action delete">
+                    <button
+                        type="submit"
+                        class="action delete"
+                    >
                         Delete
                     </button>
 
@@ -610,15 +658,19 @@
 
         </div>
 
+
         {% empty %}
 
 
         <div class="empty">
 
-            <h2>No applications yet</h2>
+            <h2>
+                No applications yet
+            </h2>
 
             <p>
-                Add your first application to start monitoring.
+                Add your first application
+                to start monitoring.
             </p>
 
         </div>
@@ -633,96 +685,169 @@
 </main>
 
 
+
 <!-- GRAPH JAVASCRIPT -->
 
 <script>
 
+
 {% for monitor in monitors %}
 
-    const chartElement{{ monitor.id }} =
-        document.getElementById(
-            "chart-{{ monitor.id }}"
-        );
 
-    if (chartElement{{ monitor.id }}) {
-
-        const labels{{ monitor.id }} =
-            {{ monitor.graph_labels|safe }};
-
-        const values{{ monitor.id }} =
-            {{ monitor.graph_values|safe }};
+const chartElement{{ monitor.id }} =
+    document.getElementById(
+        "chart-{{ monitor.id }}"
+    );
 
 
-        new Chart(
-            chartElement{{ monitor.id }},
-            {
-                type: "line",
+if (
+    chartElement{{ monitor.id }}
+    &&
+    {{ monitor.graph_values|safe }}
+        .length > 0
+) {
 
-                data: {
 
-                    labels: labels{{ monitor.id }},
+    const labels{{ monitor.id }} =
+        {{ monitor.graph_labels|safe }};
 
-                    datasets: [
 
-                        {
-                            data: values{{ monitor.id }},
+    const values{{ monitor.id }} =
+        {{ monitor.graph_values|safe }};
 
-                            borderColor: "#2563eb",
 
-                            backgroundColor:
-                                "rgba(37, 99, 235, 0.08)",
 
-                            borderWidth: 2,
+    new Chart(
+        chartElement{{ monitor.id }},
+        {
 
-                            fill: true,
+            type: "line",
 
-                            tension: 0.35,
 
-                            pointRadius: 2,
+            data: {
 
-                            pointHoverRadius: 5,
+                labels:
+                    labels{{ monitor.id }},
 
-                            spanGaps: true
-                        }
+                datasets: [
 
-                    ]
+                    {
+
+                        label:
+                            "Response Time",
+
+                        data:
+                            values{{ monitor.id }},
+
+                        borderColor:
+                            "#2563eb",
+
+                        backgroundColor:
+                            "rgba(37, 99, 235, 0.08)",
+
+                        borderWidth:
+                            2,
+
+                        fill:
+                            true,
+
+                        tension:
+                            0.35,
+
+                        pointRadius:
+                            3,
+
+                        pointHoverRadius:
+                            5,
+
+                        spanGaps:
+                            true
+
+                    }
+
+                ]
+
+            },
+
+
+            options: {
+
+                responsive:
+                    true,
+
+                maintainAspectRatio:
+                    false,
+
+
+                interaction: {
+
+                    intersect:
+                        false,
+
+                    mode:
+                        "index"
 
                 },
 
 
-                options: {
+                plugins: {
 
-                    responsive: true,
+                    legend: {
 
-                    maintainAspectRatio: false,
+                        display:
+                            false
 
-                    interaction: {
-                        intersect: false,
-                        mode: "index"
                     },
 
 
-                    plugins: {
+                    tooltip: {
 
-                        legend: {
-                            display: false
-                        },
+                        callbacks: {
 
-
-                        tooltip: {
-
-                            callbacks: {
-
-                                label: function(context) {
+                            label:
+                                function(context) {
 
                                     return (
-                                        " Response: " +
-                                        context.parsed.y +
+                                        " Response: "
+                                        +
+                                        context.parsed.y
+                                        +
                                         " ms"
                                     );
 
                                 }
 
+                        }
+
+                    }
+
+                },
+
+
+                scales: {
+
+                    x: {
+
+                        grid: {
+
+                            display:
+                                false
+
+                        },
+
+                        ticks: {
+
+                            maxTicksLimit:
+                                6,
+
+                            color:
+                                "#667085",
+
+                            font: {
+
+                                size:
+                                    11
+
                             }
 
                         }
@@ -730,46 +855,29 @@
                     },
 
 
-                    scales: {
+                    y: {
 
-                        x: {
+                        beginAtZero:
+                            true,
 
-                            grid: {
-                                display: false
-                            },
+                        grid: {
 
-                            ticks: {
-
-                                maxTicksLimit: 6,
-
-                                color: "#667085",
-
-                                font: {
-                                    size: 11
-                                }
-
-                            }
+                            color:
+                                "#edf0f4"
 
                         },
 
+                        ticks: {
 
-                        y: {
+                            color:
+                                "#667085",
 
-                            beginAtZero: true,
+                            callback:
+                                function(value) {
 
-                            grid: {
-                                color: "#edf0f4"
-                            },
-
-                            ticks: {
-
-                                color: "#667085",
-
-                                callback: function(value) {
                                     return value + " ms";
-                                }
 
-                            }
+                                }
 
                         }
 
@@ -778,11 +886,15 @@
                 }
 
             }
-        );
 
-    }
+        }
+    );
+
+}
+
 
 {% endfor %}
+
 
 </script>
 

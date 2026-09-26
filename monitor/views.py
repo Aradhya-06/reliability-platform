@@ -135,36 +135,38 @@ def toggle_monitor(request, monitor_id):
 
 def monitor_detail(request, monitor_id):
 
-    monitors = []
-
-    if os.path.exists("/monitor/data/monitors.json"):
-        with open("/monitor/data/monitors.json", "r") as file:
-            monitors = json.load(file)
+    monitors = load_json(MONITORS_FILE, [])
 
     monitor = next(
-        (m for m in monitors if m["id"] == monitor_id),
+        (
+            m for m in monitors
+            if m["id"] == monitor_id
+        ),
         None
     )
 
     if monitor is None:
         return redirect("/")
 
-    history = []
 
-    if os.path.exists("/monitor/data/health_history.json"):
-        with open("/monitor/data/health_history.json", "r") as file:
-            history = json.load(file)
+    history = load_json(HISTORY_FILE, [])
 
-    # Get checks belonging to this monitor
     monitor_history = [
-        check for check in history
-        if check.get("monitor_id") == monitor_id
-        or check.get("monitor_name") == monitor["name"]
+        check
+        for check in history
+        if (
+            check.get("monitor_id") == monitor_id
+            or check.get("monitor_name") == monitor["name"]
+        )
     ]
 
     monitor_history = monitor_history[-50:]
 
-    latest = monitor_history[-1] if monitor_history else None
+    latest = (
+        monitor_history[-1]
+        if monitor_history
+        else None
+    )
 
     context = {
         "monitor": monitor,
@@ -180,45 +182,17 @@ def monitor_detail(request, monitor_id):
     )
 
 
-'''def health_check(request):
-
-    try:
-
-        with open(HISTORY_FILE, "r") as file:
-            json.load(file)
-
-        return JsonResponse(
-            {
-                "status": "healthy",
-                "checks": {
-                    "django": "ok",
-                    "health_history": "ok"
-                }
-            },
-            status=200
-        )
-
-    except Exception as e:
-
-        return JsonResponse(
-            {
-                "status": "unhealthy",
-                "checks": {
-                    "django": "ok",
-                    "health_history": "failed"
-                },
-                "error": str(e)
-            },
-            status=500
-        )'''
 def health_check(request):
 
-    return JsonResponse({
-        "status": "healthy",
-        "checks": {
-            "django": "ok"
-        }
-    }, status=200)
+    return JsonResponse(
+        {
+            "status": "healthy",
+            "checks": {
+                "django": "ok"
+            }
+        },
+        status=200
+    )
 
 
 def dashboard(request):
@@ -228,6 +202,7 @@ def dashboard(request):
 
     monitor_data = []
 
+
     for monitor in monitors:
 
         monitor_history = [
@@ -236,28 +211,41 @@ def dashboard(request):
             if check.get("monitor_id") == monitor["id"]
         ]
 
+
         if monitor_history:
 
             latest = monitor_history[-1]
 
-            # Last 15 checks for graph
-            graph_history = monitor_history[-15:]
+            # Keep only the latest 20 checks for the graph
+            graph_history = monitor_history[-20:]
 
+
+            # Extract timestamps
             graph_labels = [
-                        check.get("timestamp")
-                        for check in monitor_history[-15:]
-                    ]   
-            
+                check.get("timestamp")
+                for check in graph_history
+            ]
+
+
+            # Extract response times
             graph_values = [
-                    check.get("response_time")
-                    for check in monitor_history[-15:]
-                   ]
+                check.get("response_time")
+                for check in graph_history
+            ]
+
 
             monitor_info = {
+
                 "id": monitor["id"],
+
                 "name": monitor["name"],
+
                 "url": monitor["url"],
-                "active": monitor.get("active", True),
+
+                "active": monitor.get(
+                    "active",
+                    True
+                ),
 
                 "status": latest.get(
                     "status",
@@ -280,31 +268,64 @@ def dashboard(request):
                     "error"
                 ),
 
-                "graph_labels": graph_labels,
-                "graph_values": graph_values
+                # IMPORTANT:
+                # Convert Python lists into valid JSON
+                # before sending them to JavaScript.
+
+                "graph_labels": json.dumps(
+                    graph_labels
+                ),
+
+                "graph_values": json.dumps(
+                    graph_values
+                )
             }
+
 
         else:
 
             monitor_info = {
+
                 "id": monitor["id"],
+
                 "name": monitor["name"],
+
                 "url": monitor["url"],
-                "active": monitor.get("active", True),
+
+                "active": monitor.get(
+                    "active",
+                    True
+                ),
 
                 "status": "unknown",
+
                 "response_time": None,
+
                 "timestamp": None,
+
                 "http_status": None,
+
                 "error": None,
 
                 "graph_labels": json.dumps([]),
+
                 "graph_values": json.dumps([])
             }
 
-        monitor_data.append(monitor_info)
 
-    total_monitors = len(monitor_data)
+        monitor_data.append(
+            monitor_info
+        )
+
+
+    # -----------------------------
+    # DASHBOARD STATISTICS
+    # -----------------------------
+
+    total_monitors = len(
+        monitor_data
+    )
+
 
     healthy_monitors = len([
         monitor
@@ -312,11 +333,13 @@ def dashboard(request):
         if monitor["status"] == "healthy"
     ])
 
+
     unhealthy_monitors = len([
         monitor
         for monitor in monitor_data
         if monitor["status"] == "unhealthy"
     ])
+
 
     checked = [
         monitor
@@ -324,13 +347,15 @@ def dashboard(request):
         if monitor["response_time"] is not None
     ]
 
+
     if checked:
 
         average_response = round(
             sum(
                 monitor["response_time"]
                 for monitor in checked
-            ) / len(checked),
+            )
+            / len(checked),
             2
         )
 
@@ -338,13 +363,24 @@ def dashboard(request):
 
         average_response = None
 
+
     context = {
+
         "monitors": monitor_data,
-        "total_monitors": total_monitors,
-        "healthy_monitors": healthy_monitors,
-        "unhealthy_monitors": unhealthy_monitors,
-        "average_response": average_response
+
+        "total_monitors":
+            total_monitors,
+
+        "healthy_monitors":
+            healthy_monitors,
+
+        "unhealthy_monitors":
+            unhealthy_monitors,
+
+        "average_response":
+            average_response
     }
+
 
     return render(
         request,

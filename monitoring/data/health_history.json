@@ -1,637 +1,5 @@
 [
     {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:16:49",
-        "status": "healthy",
-        "response_time": 403.93,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:16:49",
-        "status": "healthy",
-        "response_time": 408.35,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:17:00",
-        "status": "healthy",
-        "response_time": 499.63,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:17:00",
-        "status": "unhealthy",
-        "response_time": 1546.7,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:17:02",
-        "status": "unhealthy",
-        "response_time": 1835.13,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:17:04",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:17:04",
-        "status": "healthy",
-        "response_time": 402.52,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:17:04",
-        "status": "healthy",
-        "response_time": 304.89,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:17:14",
-        "status": "healthy",
-        "response_time": 408.69,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:17:15",
-        "status": "unhealthy",
-        "response_time": 609.56,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:17:15",
-        "status": "unhealthy",
-        "response_time": 1226.45,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:17:17",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:17:17",
-        "status": "healthy",
-        "response_time": 551.33,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:17:17",
-        "status": "healthy",
-        "response_time": 464.59,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:17:28",
-        "status": "healthy",
-        "response_time": 295.21,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:17:28",
-        "status": "unhealthy",
-        "response_time": 818.12,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:17:29",
-        "status": "unhealthy",
-        "response_time": 1479.48,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:17:30",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:17:30",
-        "status": "healthy",
-        "response_time": 351.46,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:17:31",
-        "status": "healthy",
-        "response_time": 306.3,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:17:41",
-        "status": "healthy",
-        "response_time": 290.64,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:17:41",
-        "status": "unhealthy",
-        "response_time": 848.0,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:17:42",
-        "status": "unhealthy",
-        "response_time": 2117.93,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:17:44",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:17:44",
-        "status": "healthy",
-        "response_time": 606.84,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:17:45",
-        "status": "healthy",
-        "response_time": 406.93,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:17:55",
-        "status": "healthy",
-        "response_time": 515.65,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:17:56",
-        "status": "unhealthy",
-        "response_time": 614.26,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:17:56",
-        "status": "unhealthy",
-        "response_time": 1408.02,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:17:58",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:17:58",
-        "status": "healthy",
-        "response_time": 279.39,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:17:58",
-        "status": "healthy",
-        "response_time": 347.82,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:18:08",
-        "status": "healthy",
-        "response_time": 288.97,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:18:09",
-        "status": "unhealthy",
-        "response_time": 727.84,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:18:09",
-        "status": "unhealthy",
-        "response_time": 1738.25,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:18:11",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:18:11",
-        "status": "healthy",
-        "response_time": 219.91,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:18:11",
-        "status": "healthy",
-        "response_time": 277.72,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:18:22",
-        "status": "healthy",
-        "response_time": 234.93,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:18:22",
-        "status": "unhealthy",
-        "response_time": 3960.84,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:18:26",
-        "status": "unhealthy",
-        "response_time": 1535.22,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:18:28",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:18:28",
-        "status": "healthy",
-        "response_time": 360.61,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:18:28",
-        "status": "healthy",
-        "response_time": 303.51,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:18:38",
-        "status": "healthy",
-        "response_time": 336.74,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:18:39",
-        "status": "unhealthy",
-        "response_time": 1328.8,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:18:40",
-        "status": "unhealthy",
-        "response_time": 1617.35,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:18:42",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:18:42",
-        "status": "healthy",
-        "response_time": 279.79,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:18:42",
-        "status": "healthy",
-        "response_time": 342.39,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:18:52",
-        "status": "healthy",
-        "response_time": 300.85,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:18:52",
-        "status": "unhealthy",
-        "response_time": 808.07,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:18:53",
-        "status": "unhealthy",
-        "response_time": 1854.8,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:18:55",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:18:55",
-        "status": "healthy",
-        "response_time": 267.88,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:18:55",
-        "status": "healthy",
-        "response_time": 267.1,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:19:06",
-        "status": "healthy",
-        "response_time": 365.25,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:19:06",
-        "status": "unhealthy",
-        "response_time": 613.56,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:19:07",
-        "status": "unhealthy",
-        "response_time": 1228.81,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:19:08",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:19:08",
-        "status": "healthy",
-        "response_time": 398.33,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:19:08",
-        "status": "healthy",
-        "response_time": 306.85,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:19:19",
-        "status": "healthy",
-        "response_time": 286.01,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:19:19",
-        "status": "unhealthy",
-        "response_time": 611.95,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:19:20",
-        "status": "unhealthy",
-        "response_time": 1538.02,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:19:21",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:19:21",
-        "status": "healthy",
-        "response_time": 393.79,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:19:22",
-        "status": "healthy",
-        "response_time": 409.63,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:19:32",
-        "status": "healthy",
-        "response_time": 365.79,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:19:32",
-        "status": "unhealthy",
-        "response_time": 1155.38,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:19:34",
-        "status": "unhealthy",
-        "response_time": 1841.41,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:19:35",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:19:35",
-        "status": "healthy",
-        "response_time": 704.53,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 8,
-        "timestamp": "2026-09-26 21:19:36",
-        "status": "healthy",
-        "response_time": 508.53,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 1,
-        "timestamp": "2026-09-26 21:19:47",
-        "status": "healthy",
-        "response_time": 297.26,
-        "http_status": 200,
-        "error": null
-    },
-    {
-        "monitor_id": 4,
-        "timestamp": "2026-09-26 21:19:47",
-        "status": "unhealthy",
-        "response_time": 818.1,
-        "http_status": 403,
-        "error": "HTTP 403: Forbidden"
-    },
-    {
-        "monitor_id": 5,
-        "timestamp": "2026-09-26 21:19:48",
-        "status": "unhealthy",
-        "response_time": 1536.01,
-        "http_status": 429,
-        "error": "HTTP 429: Too Many Requests"
-    },
-    {
-        "monitor_id": 6,
-        "timestamp": "2026-09-26 21:19:49",
-        "status": "unhealthy",
-        "response_time": null,
-        "http_status": null,
-        "error": "<urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-        "monitor_id": 7,
-        "timestamp": "2026-09-26 21:19:49",
-        "status": "healthy",
-        "response_time": 216.68,
-        "http_status": 200,
-        "error": null
-    },
-    {
         "monitor_id": 8,
         "timestamp": "2026-09-26 21:19:50",
         "status": "healthy",
@@ -1596,6 +964,638 @@
         "timestamp": "2026-09-26 21:24:32",
         "status": "healthy",
         "response_time": 408.17,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 21:58:46",
+        "status": "healthy",
+        "response_time": 533.16,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 21:58:47",
+        "status": "unhealthy",
+        "response_time": 823.86,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 21:58:47",
+        "status": "unhealthy",
+        "response_time": 2349.88,
+        "http_status": 429,
+        "error": "HTTP 429: Too Many Requests"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 21:58:50",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 21:58:50",
+        "status": "healthy",
+        "response_time": 391.72,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 8,
+        "timestamp": "2026-09-26 21:58:50",
+        "status": "healthy",
+        "response_time": 409.01,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 21:59:01",
+        "status": "healthy",
+        "response_time": 597.99,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 21:59:01",
+        "status": "unhealthy",
+        "response_time": 918.35,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 21:59:02",
+        "status": "unhealthy",
+        "response_time": 1636.11,
+        "http_status": 429,
+        "error": "HTTP 429: Too Many Requests"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 21:59:04",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 21:59:04",
+        "status": "healthy",
+        "response_time": 396.21,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 8,
+        "timestamp": "2026-09-26 21:59:04",
+        "status": "healthy",
+        "response_time": 511.89,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 21:59:15",
+        "status": "healthy",
+        "response_time": 394.04,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 21:59:15",
+        "status": "unhealthy",
+        "response_time": 894.47,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 21:59:16",
+        "status": "unhealthy",
+        "response_time": 1564.44,
+        "http_status": 429,
+        "error": "HTTP 429: Too Many Requests"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 21:59:18",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 21:59:18",
+        "status": "healthy",
+        "response_time": 390.16,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 8,
+        "timestamp": "2026-09-26 21:59:18",
+        "status": "healthy",
+        "response_time": 310.21,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 21:59:28",
+        "status": "healthy",
+        "response_time": 440.55,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 21:59:29",
+        "status": "unhealthy",
+        "response_time": 676.24,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 21:59:30",
+        "status": "unhealthy",
+        "response_time": 1932.71,
+        "http_status": 429,
+        "error": "HTTP 429: Too Many Requests"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 21:59:32",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 21:59:32",
+        "status": "healthy",
+        "response_time": 593.62,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 8,
+        "timestamp": "2026-09-26 21:59:32",
+        "status": "healthy",
+        "response_time": 411.59,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 21:59:43",
+        "status": "healthy",
+        "response_time": 597.15,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 21:59:43",
+        "status": "unhealthy",
+        "response_time": 1131.72,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 21:59:44",
+        "status": "unhealthy",
+        "response_time": 1634.2,
+        "http_status": 429,
+        "error": "HTTP 429: Too Many Requests"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 21:59:46",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 21:59:46",
+        "status": "healthy",
+        "response_time": 603.32,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 8,
+        "timestamp": "2026-09-26 21:59:47",
+        "status": "healthy",
+        "response_time": 306.47,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 21:59:57",
+        "status": "healthy",
+        "response_time": 296.26,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 21:59:57",
+        "status": "unhealthy",
+        "response_time": 1025.4,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 21:59:58",
+        "status": "unhealthy",
+        "response_time": 1532.86,
+        "http_status": 429,
+        "error": "HTTP 429: Too Many Requests"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 22:00:00",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 22:00:00",
+        "status": "healthy",
+        "response_time": 398.04,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 8,
+        "timestamp": "2026-09-26 22:00:00",
+        "status": "healthy",
+        "response_time": 206.22,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 9,
+        "timestamp": "2026-09-26 22:00:00",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 22:00:11",
+        "status": "healthy",
+        "response_time": 327.32,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 22:00:11",
+        "status": "unhealthy",
+        "response_time": 513.35,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 22:00:12",
+        "status": "unhealthy",
+        "response_time": 2234.04,
+        "http_status": 429,
+        "error": "HTTP 429: Too Many Requests"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 22:00:14",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 22:00:14",
+        "status": "healthy",
+        "response_time": 416.89,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 8,
+        "timestamp": "2026-09-26 22:00:14",
+        "status": "healthy",
+        "response_time": 409.54,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 9,
+        "timestamp": "2026-09-26 22:00:15",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 22:00:25",
+        "status": "healthy",
+        "response_time": 305.61,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 22:00:25",
+        "status": "unhealthy",
+        "response_time": 614.7,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 22:00:26",
+        "status": "unhealthy",
+        "response_time": 1534.6,
+        "http_status": 429,
+        "error": "HTTP 429: Too Many Requests"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 22:00:28",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 22:00:28",
+        "status": "healthy",
+        "response_time": 5307.32,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 8,
+        "timestamp": "2026-09-26 22:00:33",
+        "status": "healthy",
+        "response_time": 305.68,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 9,
+        "timestamp": "2026-09-26 22:00:33",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 22:00:43",
+        "status": "healthy",
+        "response_time": 5425.4,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 22:00:49",
+        "status": "unhealthy",
+        "response_time": 719.37,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 22:00:50",
+        "status": "unhealthy",
+        "response_time": 2146.92,
+        "http_status": 429,
+        "error": "HTTP 429: Too Many Requests"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 22:00:52",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 22:00:52",
+        "status": "healthy",
+        "response_time": 402.55,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 8,
+        "timestamp": "2026-09-26 22:00:52",
+        "status": "healthy",
+        "response_time": 511.48,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 9,
+        "timestamp": "2026-09-26 22:00:53",
+        "status": "healthy",
+        "response_time": 1080.44,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 22:01:04",
+        "status": "healthy",
+        "response_time": 336.65,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 22:01:04",
+        "status": "unhealthy",
+        "response_time": 822.34,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 22:01:05",
+        "status": "unhealthy",
+        "response_time": 1632.84,
+        "http_status": 429,
+        "error": "HTTP 429: Too Many Requests"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 22:01:07",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 22:01:07",
+        "status": "healthy",
+        "response_time": 302.89,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 8,
+        "timestamp": "2026-09-26 22:01:07",
+        "status": "healthy",
+        "response_time": 307.65,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 9,
+        "timestamp": "2026-09-26 22:01:07",
+        "status": "healthy",
+        "response_time": 898.79,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 22:01:18",
+        "status": "healthy",
+        "response_time": 323.04,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 22:01:18",
+        "status": "unhealthy",
+        "response_time": 921.11,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 22:01:19",
+        "status": "unhealthy",
+        "response_time": 1636.95,
+        "http_status": 429,
+        "error": "HTTP 429: Too Many Requests"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 22:01:21",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 22:01:21",
+        "status": "healthy",
+        "response_time": 399.8,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 8,
+        "timestamp": "2026-09-26 22:01:21",
+        "status": "healthy",
+        "response_time": 304.01,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 9,
+        "timestamp": "2026-09-26 22:01:22",
+        "status": "healthy",
+        "response_time": 823.79,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 1,
+        "timestamp": "2026-09-26 22:01:33",
+        "status": "healthy",
+        "response_time": 392.23,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 4,
+        "timestamp": "2026-09-26 22:01:33",
+        "status": "unhealthy",
+        "response_time": 925.39,
+        "http_status": 403,
+        "error": "HTTP 403: Forbidden"
+    },
+    {
+        "monitor_id": 5,
+        "timestamp": "2026-09-26 22:01:34",
+        "status": "unhealthy",
+        "response_time": 1941.17,
+        "http_status": 429,
+        "error": "HTTP 429: Too Many Requests"
+    },
+    {
+        "monitor_id": 6,
+        "timestamp": "2026-09-26 22:01:36",
+        "status": "unhealthy",
+        "response_time": null,
+        "http_status": null,
+        "error": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+        "monitor_id": 7,
+        "timestamp": "2026-09-26 22:01:36",
+        "status": "healthy",
+        "response_time": 395.84,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 8,
+        "timestamp": "2026-09-26 22:01:36",
+        "status": "healthy",
+        "response_time": 304.77,
+        "http_status": 200,
+        "error": null
+    },
+    {
+        "monitor_id": 9,
+        "timestamp": "2026-09-26 22:01:37",
+        "status": "healthy",
+        "response_time": 922.24,
         "http_status": 200,
         "error": null
     }
