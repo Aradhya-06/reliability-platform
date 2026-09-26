@@ -1,15 +1,37 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 
 
 class HealthCheckTest(TestCase):
+
+    def setUp(self):
+        self.client = Client()
+
     def test_health_check(self):
         response = self.client.get("/health/")
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json()["status"], "healthy")
+
+        data = response.json()
+
+        self.assertEqual(data["status"], "healthy")
 
 
-class TasksTest(TestCase):
-    def test_tasks_endpoint(self):
-        response = self.client.get("/tasks/")
+class DashboardTest(TestCase):
+
+    def setUp(self):
+        self.client = Client()
+
+    def test_dashboard(self):
+        response = self.client.get("/")
+
         self.assertEqual(response.status_code, 200)
-        self.assertIn("tasks", response.json())
+
+
+class AddMonitorTest(TestCase):
+
+    def setUp(self):
+        self.client = Client()
+
+    def test_add_monitor_page(self):
+        response = self.client.get("/add_monitor/")
+
+        self.assertEqual(response.status_code, 200)
